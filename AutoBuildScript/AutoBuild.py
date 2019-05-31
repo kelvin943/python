@@ -7,7 +7,7 @@ from biplist import *
 import subprocess
 import requests
 
-ScriptPath            = 'Script/'
+ScriptPath            = 'AutoBuildScript/'
 ExportOptionsPlist    = ScriptPath + 'ExportOptionsAutomic.plist'
 ConfigurationFileName = ScriptPath + 'Configuration.plist'
 
@@ -30,7 +30,7 @@ class AutoBuildTools():
             print ('-s (scheme) cannot be nil on workspace ,it requires a parameter.Please try again')
             return
 
-        if self.config is not None:
+        if self.config.find('Debug') != -1 or self.config.find('debug') != -1:
             self.config = 'Debug'
 
         #导出包的目录默认是ScriptPath/target 下
@@ -246,7 +246,7 @@ def main():
 
     parser.add_option("-d", "--deployment", help="deployment web target pgy/fir or upload appstore", metavar="distribute")
 
-    customArgs = ['-w','SmartOperationMobile.xcworkspace','-s','FM','--archiveMethod','development','-d','pgy']
+    customArgs = ['-w','/Users/zhangquan526/project/SmartOperation.iOS/SmartOperationMobile.xcworkspace','-s','OPS','--archiveMethod','development','-d','pgy']
     (options, args) = parser.parse_args(customArgs)
     print('options: %s ,args: %s' % (options,args))
     buildTools = AutoBuildTools(options)
