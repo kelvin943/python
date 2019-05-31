@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"python.pythonPath": "~/.virtualenvs/env37/bin/python",
+		"editor.fontSize": 14,
+		"vsicons.dontShowNewVersionMessage": true,
+		"python.linting.pylintEnabled": true,
+		"python.linting.pylintPath": "~/.virtualenvs/env37/bin/python",
+		"python.workspaceSymbols.exclusionPatterns": [
+			"~/.virtualenvs/env37/lib/python3.7/site-packages/**"
+		  ],
+		"code-runner.executorMap": {
+			"javascript": "node",
+			"php": "php",
+			"python": "set PYTHONIOENCODING=utf8 && ~/.virtualenvs/env37/bin/python -u"
+		},
+		"editor.renderWhitespace": "all"
+
+	}
+}

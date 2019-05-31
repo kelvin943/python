@@ -1,0 +1,5 @@
+{
+    // "python.pythonPath": "/usr/local/bin/python3"
+    "python.pythonPath": "/Users/zhangquan526/.virtualenvs/env37/bin/python",
+    "python.linting.pylintEnabled": true
+}
